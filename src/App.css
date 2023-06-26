@@ -1,0 +1,56 @@
+.app-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  padding-block: 20px;
+}
+
+.app-container h1{
+  color: white;
+}
+
+/* Form (Input Field and Button) */
+.searchForm{
+  width: 400px;
+  display: flex;
+  padding-block: 20px;
+}
+
+.searchForm input{
+  width: 100%;
+  font-family: 'Space Mono', monospace;
+  padding: 15px;
+  color: white;
+  border: none;
+  background-color: rgb(30,42,71);
+  font-size: 15px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.searchForm input:focus{
+  outline: none;
+}
+
+.searchForm input::placeholder{
+  color: white;
+  opacity: 0.6;
+}
+
+.searchForm button{
+  padding: 10px;
+  margin-left: -10px;
+  font-weight: bold;
+  transition: opacity 0.3s ease;
+  cursor: pointer;
+}
+
+.searchForm button:hover{
+  opacity: 0.7;
+}
+
+.user-details-container{
+  color: white;
+}
