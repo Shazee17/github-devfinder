@@ -1,45 +1,58 @@
-.app-container{
+.app-container {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-
-  padding-block: 20px;
+  width: 100%;
+  padding: 20px;
 }
 
-.app-container h1{
+.app-container h1 {
   color: white;
 }
 
-/* Form (Input Field and Button) */
-.searchForm{
-  width: 400px;
+.title-container {
   display: flex;
-  padding-block: 20px;
+  align-items: center;
+  gap: 10px;
 }
 
-.searchForm input{
+.title-container img {
+  width: 40px;
+}
+
+/* Form (Input Field and Button) */
+.searchForm {
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  padding: 20px;
+}
+
+.searchForm input {
   width: 100%;
   font-family: 'Space Mono', monospace;
   padding: 15px;
   color: white;
   border: none;
-  background-color: rgb(30,42,71);
+  background-color: rgb(30, 42, 71);
   font-size: 15px;
   border-radius: 5px;
   font-weight: bold;
+  transition: background-color 1s ease-out;
 }
 
-.searchForm input:focus{
+.searchForm input:focus {
   outline: none;
+  background-color: rgb(12, 17, 28);
 }
 
-.searchForm input::placeholder{
+.searchForm input::placeholder {
   color: white;
   opacity: 0.6;
 }
 
-.searchForm button{
+.searchForm button {
   padding: 10px;
   margin-left: -10px;
   font-weight: bold;
@@ -47,10 +60,102 @@
   cursor: pointer;
 }
 
-.searchForm button:hover{
+.searchForm button:hover {
   opacity: 0.7;
 }
 
-.user-details-container{
+/* user details */
+.user-details-container {
   color: white;
+  padding: 20px;
+  background-color: rgb(30, 42, 71);
+  max-width: 600px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
 }
+
+.avatar-container {
+  width: 30%;
+}
+
+.avatar-container img {
+  max-width: 100%;
+  border-radius: 50%;
+}
+
+
+.user-details {
+  width: 100%;
+  padding-inline: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.user-bio {
+  padding-block: 30px;
+}
+
+.repos-details {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: rgb(12, 17, 28);
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.links-container {
+  width: 100%;
+  background-color: rgb(12, 17, 28);
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.flex-items {
+  margin-top: 10px;
+  display: flex;
+  gap: 20px;
+}
+
+.avatar-container img,
+.user-details-container,
+.repos-details,
+.links-container {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .user-details-container {
+    flex-direction: column;
+  }
+
+  .avatar-container {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto; /* Added margin auto to horizontally center the container */
+  }
+
+  .avatar-container img {
+    max-width: 100%;
+    border-radius: 50%;
+  }
+
+  /* Added media query for screen width below 400px */
+  @media (max-width: 400px) {
+    .app-container h1 {
+      font-size: 24px; /* Adjust the font-size as per your preference */
+    }
+  }
+}
+
+

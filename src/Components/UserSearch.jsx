@@ -24,6 +24,8 @@ const UserSearch = () => {
   }, []);
   
   return (
+    <>
+    
     <div>
       <form onSubmit={handleSubmit} className="searchForm">
         <input
@@ -35,8 +37,10 @@ const UserSearch = () => {
         <button type="submit">Search</button>
       </form>
 
-      <DisplayUser user={userData} />
+      
     </div>
+    <DisplayUser user={userData} />
+    </>
   );
 };
 
