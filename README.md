@@ -1,0 +1,3 @@
+# Github DevFinder
+
+A web application built with React that allows users to search and explore GitHub profiles. It provides a user-friendly interface to discover developers and obtain detailed information about their repositories, followers, and following as well as additional information like the user's company, location, website, and Twitter using **GitHub API** which enables data retrieval from GitHub's extensive collection of user and repository information.
